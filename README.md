@@ -4,12 +4,8 @@ A full-stack blog application built with Node.js, Express.js and EJS as part of 
 
 > ⚠️ **Note:** This project does not use a database yet. Posts are stored in memory and will be lost when the server restarts. MongoDB integration coming in a future update!
 
----
-
 ## 🌐 Live Demo
-[Click here to view live demo](https://blog-app-oirh.onrender.com)
-
----
+[🔗 Link](https://blog-app-oirh.onrender.com)
 
 ## ✨ Features
 - Create new blog posts
@@ -31,7 +27,6 @@ A full-stack blog application built with Node.js, Express.js and EJS as part of 
 | Bootstrap 5 | Frontend styling |
 | HTML & CSS | Structure and custom styles |
 
----
 
 ## 🚀 How to Run Locally
 
@@ -60,7 +55,6 @@ node index.js
 http://localhost:3000
 ```
 
----
 
 ## 📁 Project Structure
 ```
@@ -82,15 +76,11 @@ blog-app/
     └── styles.css
 ```
 
----
-
 ## 🔮 Future Updates
 - [ ] Add MongoDB for permanent data storage
 - [ ] User authentication (login/signup)
 - [ ] Image upload for posts
 - [ ] Search functionality
-
----
 
 
 ## 👨‍💻 Author
