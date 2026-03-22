@@ -38,6 +38,9 @@ app.post("/edit/:index", (req, res) => {
     res.redirect("/")
 })
 
+app.get("/about", (req, res) => {
+    res.render("about");
+})
 
 app.post("/delete/:index", (req, res) => {
     posts.splice(req.params.index, 1);
