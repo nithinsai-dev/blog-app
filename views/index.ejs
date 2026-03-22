@@ -1,4 +1,23 @@
 <%- include("partials/header.ejs") %>
 
+    <div class="mt-5">
+        <h2>All Posts</h2>
+        <% posts.forEach((post,index)=> { %>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <%= post.title %>
+                    </h3>
+                    <p class="card-text">
+                        <%= post.content %>
+                    </p>
+                    <a href="/edit/<%= index %>" class="btn btn-warning">Edit</a>
+                    <form action="/delete/<%= index %>" method="POST" style="display:inline">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% }) %>
+    </div>
 
     <%- include("partials/footer.ejs") %>
