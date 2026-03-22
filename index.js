@@ -23,7 +23,6 @@ app.post("/create", (req, res) => {
     let title = req.body["blog-title"];
     let content = req.body["blog-content"];
     posts.push({ title: title, content: content });
-    console.log(posts);
     res.redirect("/");
 })
 
@@ -39,12 +38,17 @@ app.post("/edit/:index", (req, res) => {
 })
 
 app.get("/about", (req, res) => {
-    res.render("about");
+    res.render("about")
 })
 
 app.post("/delete/:index", (req, res) => {
     posts.splice(req.params.index, 1);
     res.redirect("/");
+})
+
+app.get("/view/:index", (req, res) => {
+    const post = posts[req.params.index];
+    res.render("view-post.ejs", { post: post })
 })
 
 app.listen(port, () => {

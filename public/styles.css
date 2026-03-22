@@ -6,8 +6,28 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: #555;
+    line-height: 1.7;
+}
+
+.card {
+    transition: 0.2s;
 }
 
 footer {
     margin-top: auto;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.btn:hover {
+    filter: brightness(0.8);
+    transition: 0.2s;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 10px hsl(0, 0%, 70%);
+    transform: translateY(-4px);
 }

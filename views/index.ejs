@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 
     <div class="mt-5">
-        <h2>All Posts</h2>
+        <h1>All Posts</h1>
         <% posts.forEach((post,index)=> { %>
             <div class="card mb-3">
                 <div class="card-body">
@@ -9,12 +9,15 @@
                         <%= post.title %>
                     </h3>
                     <p class="card-text">
-                        <%= post.content %>
+                        <% const content=post.content %>
+                            <% const displayContent=content.substring(0,100) + "..." %>
+                                <%= displayContent %>
                     </p>
                     <a href="/edit/<%= index %>" class="btn btn-warning">Edit</a>
                     <form action="/delete/<%= index %>" method="POST" style="display:inline">
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
+                    <a href="/view/<%= index %>" class="btn btn-info">View</a>
                 </div>
             </div>
             <% }) %>
