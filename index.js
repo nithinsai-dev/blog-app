@@ -22,7 +22,9 @@ app.get("/create", (req, res) => {
 app.post("/create", (req, res) => {
     let title = req.body["blog-title"];
     let content = req.body["blog-content"];
-    posts.push({ title: title, content: content });
+    let author = req.body["blog-author"];
+    let date = new Date();
+    posts.push({ title: title, content: content, author: author, date: date });
     res.redirect("/");
 })
 

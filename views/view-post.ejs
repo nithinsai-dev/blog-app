@@ -8,6 +8,12 @@
     <p>
         <%= post.content %>
     </p>
+    <p class="text-muted">
+        <small>By <%= post.author %></small>
+    </p>
+    <p>
+        <small>Published on <%= post.date.toLocaleString() %></small>
+    </p>
 
 
     <%- include("partials/footer.ejs") %>

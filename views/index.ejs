@@ -8,10 +8,16 @@
                     <h3 class="card-title">
                         <%= post.title %>
                     </h3>
-                    <p class="card-text">
+                    <h4 class="card-text">
                         <% const content=post.content %>
                             <% const displayContent=content.substring(0,100) + "..." %>
                                 <%= displayContent %>
+                    </h4>
+                    <p class="text-muted">
+                        By <%= post.author %>
+                    </p>
+                    <p>
+                        <small>Published on <%= post.date.toLocaleString() %></small>
                     </p>
                     <a href="/edit/<%= index %>" class="btn btn-warning">Edit</a>
                     <form action="/delete/<%= index %>" method="POST" style="display:inline">
