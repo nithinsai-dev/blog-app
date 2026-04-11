@@ -13,13 +13,13 @@
                                 </h3>
                             </div>
                             <div>
-                                <a href="/view/<%= index %>"
-                                    style="text-decoration: none; color: white; font-size : 1.5rem">-></a>
+                                <a href="/view/<%= post.id %>"
+                                    style="text-decoration: none; color: white; font-size : 1.3rem">-></a>
                             </div>
                         </div>
                         <div class="links">
-                            <a href="/edit/<%= index %>" class="btn">+ Edit</a>
-                            <form action="/delete/<%= index %>" method="POST" style="display:inline">
+                            <a href="/edit/<%= post.id %>" class="btn">+ Edit</a>
+                            <form action="/delete/<%= post.id %>" method="POST" style="display:inline">
                                 <button type="submit" class="btn">- Delete</button>
                             </form>
                         </div>
